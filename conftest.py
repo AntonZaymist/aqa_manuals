@@ -48,6 +48,14 @@ def hw21_ex2_driver(chrome_driver):
     yield chrome_driver
     chrome_driver.close()
 
+
+@pytest.fixture(scope="module")
+def hw22_driver(chrome_driver):
+    chrome_driver.get("https://www.saucedemo.com/")
+    chrome_driver.implicitly_wait(15)
+    yield chrome_driver
+    chrome_driver.close()
+
 # @pytest.fixture()
 # def searched_field(main_page_driver):
 #     search_field = main_page_driver.find_element(By.ID, "searchInput")
