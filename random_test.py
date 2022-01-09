@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 
 
 def main():
-    try:
+
         link = "https://www.onliner.by/"
         browser = webdriver.Chrome()
         browser.get(link)
@@ -12,8 +12,7 @@ def main():
         elements = browser.find_elements(By.CSS_SELECTOR, "div.catalog-offers__section")
 
         print("ddd")
-    finally:
-        browser.quit()
+
 
 
 if __name__ == "__main__":

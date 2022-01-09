@@ -3,7 +3,6 @@ from selenium.webdriver.common.by import By
 
 
 def main():
-    try:
         link = "http://the-internet.herokuapp.com/"
         browser = webdriver.Chrome()
         browser.get(link)
@@ -14,8 +13,7 @@ def main():
         element2.get_attribute('2222')
         # print("ddd")
 
-    finally:
-        browser.quit()
+
 
 
 if __name__ == "__main__":
