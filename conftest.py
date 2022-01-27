@@ -56,6 +56,13 @@ def hw22_driver(chrome_driver):
     yield chrome_driver
     chrome_driver.close()
 
+
+@pytest.fixture(scope="session")
+def hw22_driver(chrome_driver):
+    chrome_driver.get("http://selenium1py.pythonanywhere.com/en-gb/")
+    yield chrome_driver
+    chrome_driver.close()
+
 # @pytest.fixture()
 # def searched_field(main_page_driver):
 #     search_field = main_page_driver.find_element(By.ID, "searchInput")
